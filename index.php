@@ -1,3 +1,4 @@
 <?php
+$heading = "Home";
 
-require "index.view.php";
+require 'views/index.view.php'; //cannot use /views/index.view.php because it is not a root directory
