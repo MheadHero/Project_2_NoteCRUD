@@ -15,10 +15,10 @@ class Database{
         ]);
     }
     
-    public function query($query){
+    public function query($query, $arg = []){ //execute expect an array 
 
         $statement = $this->connection->prepare($query);
-        $statement->execute();
+        $statement->execute($arg);
 
         return $statement;
     }
