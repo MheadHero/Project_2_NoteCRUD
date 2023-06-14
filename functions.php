@@ -9,3 +9,9 @@ function dd($var){
 function uriNow($uri){
     return $_SERVER['REQUEST_URI'] === $uri;
 }
+
+function authorize($condition, $status = Response::UNAUTHORIZED){
+    if (!$condition) {
+        abort($status);
+    }
+}
