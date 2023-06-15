@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Journey</title>
     <!-- Import Tailwind CSS library-->
-    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script> 
 </head>
 <body class = "h=full">
     
