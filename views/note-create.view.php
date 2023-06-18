@@ -19,7 +19,7 @@
                                 </div>
                                 <?php if (isset($errors)) : ?>
                                 <p class="text-red-500 text-xs italic">
-                                    <?= $errors['body'] ?>
+                                    <?= $errors['body']??"" ?>
                                 </p>
                                 <?php endif; ?>
                             </div>
