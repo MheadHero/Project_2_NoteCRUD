@@ -15,3 +15,12 @@ function authorize($condition, $status = Response::UNAUTHORIZED){
         abort($status);
     }
 }
+
+function basePath($path){
+    return BASE_PATH . $path;
+}
+
+function view($path, $vars = []){
+    extract($vars); //useful for passing variables to views
+    require basePath('views/'.$path);
+}

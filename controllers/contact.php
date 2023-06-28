@@ -1,4 +1,6 @@
 <?php
 $heading = "Contact";
 
-require 'views/contact.view.php'; //cannot use /views/contact.view.php because it is not a root directory
+view('contact.view.php', [
+    'heading' => $heading
+]); //cannot use /views/contact.view.php because it is not a root directory
