@@ -2,11 +2,11 @@
 
 const BASE_PATH = __DIR__. '/../';
 
-require BASE_PATH . 'functions.php';
+require BASE_PATH . 'Core/functions.php';
 
-spl_autoload_register(function ($class) {
-
-    require basePath("Core/{$class}.php");
+spl_autoload_register(function ($class) { //will load a function whenever a class is called
+    $results = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+    require basePath("{$results}.php");
 });
 
-require basePath('router.php');
+require basePath('Core/router.php');

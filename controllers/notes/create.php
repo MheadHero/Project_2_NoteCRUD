@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+use Core\Database;
+use Core\Validator;
+
 $config = require basePath('config.php');
 
 //$db = new Database($config['database'], 'root', 'Mhead1864,');
@@ -17,6 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'body' => $_POST['body'],
             'userid' => 1
         ]);
+
+        header('Location: /notes');
+        exit();
     }
 
 }
