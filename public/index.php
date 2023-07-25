@@ -9,4 +9,12 @@ spl_autoload_register(function ($class) { //will load a function whenever a clas
     require basePath("{$results}.php");
 });
 
-require basePath('Core/router.php');
+require basePath('bootstrap.php');
+
+$router = new \Core\Router();
+$routes = require basePath('routes.php');
+
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
+
+$router->route($uri, $method);

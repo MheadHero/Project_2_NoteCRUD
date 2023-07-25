@@ -24,7 +24,7 @@ so we need to go back to the root directory to find the views folder -->
         </ul>
 
         <p class="mt-6">
-            <a href="/note/create" class="text-blue-500 underline">Create New Note</a>
+            <a href="/notes/create" class="text-blue-500 underline">Create New Note</a>
         </p>
     </div>
 </main>

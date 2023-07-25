@@ -12,6 +12,15 @@ function uriNow($uri){
     return $_SERVER['REQUEST_URI'] === $uri;
 }
 
+function abort($code = 404)
+{
+    http_response_code($code);
+
+    require basePath("views/{$code}.view.php");
+
+    die();
+}
+
 function authorize($condition, $status = Response::UNAUTHORIZED){
     if (!$condition) {
         abort($status);
